@@ -14,7 +14,7 @@ const logout = async (req, res) => {
 const student = async (req, res) => {
   try {
     await res.send(req.rootUser);
-    console.log(req.rootUser);
+    // console.log(req.rootUser);
   } catch (error) {
     console.log(error);
   }

@@ -6,31 +6,31 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
 
 const Navbar = () => {
-  // const [islogin, setislogin] = useState(true);
-  // const [islogout, setislogout] = useState(true);
+  const [islogin, setislogin] = useState(true);
+  const [islogout, setislogout] = useState(true);
 
-  // useEffect(() => {
-  //   // setislogout(true);
-  //   verifyUser();
-  // });
+  useEffect(() => {
+    // setislogout(true);
+    verifyUser();
+  });
 
-  // const verifyUser = async () => {
-  //   try {
-  //     const res = await fetch("http://localhost:5050/api/v1/studentAuth", {
-  //       method: "GET",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
+  const verifyUser = async () => {
+    try {
+      const res = await fetch("/api/v1/studentAuthenticate", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-  //     if (res.status === 200) {
-  //       // setislogin(false);
-  //       setislogout(false);
-  //     }
-  //   } catch (e) {
-  //     setislogout(true);
-  //   }
-  // };
+      if (res.status === 200) {
+        setislogin(false);
+        setislogout(false);
+      }
+    } catch (e) {
+      setislogout(true);
+    }
+  };
 
   const navigator = useNavigate();
   const [nav, setNav] = useState(false);
@@ -83,19 +83,22 @@ const Navbar = () => {
               Contact Us
             </li>
             {/* </a> */}
-            <Link to="/Course">
-              <li className="nav_li">Course</li>
-            </Link>
-            {/* <div className={islogout ? "" : "hide_logout"}> */}
-            <Link to="/login">
-              <li className="nav_li">Login</li>
-            </Link>
-            {/* </div> */}
-            {/* <div className={islogout ? "hide_logout" : ""}>
+            <div className={islogout ? "hide_logout" : ""}>
+              <Link to="/Course">
+                <li className="nav_li">Course</li>
+              </Link>
+            </div>
+
+            <div className={islogout ? "" : "hide_logout"}>
+              <Link to="/login">
+                <li className="nav_li">Login</li>
+              </Link>
+            </div>
+            <div className={islogout ? "hide_logout" : ""}>
               <Link to="/logout">
                 <li className="nav_li">Logout</li>
               </Link>
-            </div> */}
+            </div>
           </ul>
         </nav>
       </header>

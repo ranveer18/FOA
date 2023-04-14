@@ -14,7 +14,8 @@ const LoginForm = () => {
       const response = await fetch("/api/v1/login/student", {
         method: "POST",
         credentials: "include",
-
+        mode: "cors",
+        withCredentials: true,
         headers: {
           "Content-Type": "application/json",
         },
@@ -24,10 +25,12 @@ const LoginForm = () => {
         }),
       });
       const data = response.json();
-      if (response.status === 404 || !data) {
+      if (response.status === 400 || !data) {
         window.alert("invalid credentials");
+      } else if (response.status === 201) {
+        navigate("/course");
       } else {
-        navigate("/");
+        window.alert("invalid credentials");
       }
     } catch (error) {
       console.log(error);

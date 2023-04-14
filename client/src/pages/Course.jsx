@@ -28,21 +28,27 @@ const Course = () => {
       const res = await fetch("/api/v1/studentAuthenticate", {
         method: "GET",
         credentials: "include",
-
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
       });
       const data = await res.json();
-
+      console.log(`data ${data}`);
+      console.log(`res ${res}`);
       if (res.status === 401 || !data) {
         const error = new Error(res.error);
-        console.log(error);
+        console.log(`error ${error}`);
       } else if (res.status === 200) {
         console.log("verified");
       }
     } catch (error) {
-      navigation("/");
+      // console.log(`error ${error}`);
+      // window.alert(error);
+      window.alert(`Please Login `);
+      // window.location.href = "/login";
+      navigation("/login");
+
       console.log(error);
     }
   };
