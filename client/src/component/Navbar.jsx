@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
 
 const Navbar = () => {
-  const [islogin, setislogin] = useState(true);
+  // const [islogin, setislogin] = useState(true);
   const [islogout, setislogout] = useState(true);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Navbar = () => {
       });
 
       if (res.status === 200) {
-        setislogin(false);
+        // setislogin(false);
         setislogout(false);
       }
     } catch (e) {

@@ -849,9 +849,9 @@ span:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* width: 100%; */
+  /* width: 100vw; */
   height: 100vh;
-  padding: 20rem;
+  /* padding: 20rem; */
   /* position: relative; */
   /* opacity: 0.5; */
 
@@ -868,13 +868,14 @@ span:hover {
   align-items: center;
   justify-content: space-evenly;
   width: 55vw;
+
 }
 
 .loginImg {
   /* position: absolute; */
   /* z-index: 999; */
   width: 35vw;
-  height: 15vw;
+  height: 25vh;
 
 }
 
@@ -882,12 +883,12 @@ span:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 35vw;
-  height: 80vh;
+  justify-content: space-evenly;
+  /* width: 35vw; */
+  height: 60vh;
   background-color: rgb(170, 191, 206);
   border-radius: 1rem;
-  padding: 2rem 18rem;
+  padding: 2rem 1rem;
   box-shadow: 1px 5px 10px #fff;
   opacity: 5;
 }
@@ -976,6 +977,69 @@ footer .copyright__container {
 footer .copyright {
   font-weight: 600;
 }
+
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.notfoundImg {
+  padding-bottom: 10rem;
+  animation: 1s infinite;
+  animation-name: shake;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+
 
 @media screen and (max-width: 768px) {
   .floating_buttons {
@@ -1239,8 +1303,8 @@ footer .copyright {
   .loginImg {
     /* position: absolute; */
     /* z-index: 999; */
-    width: 45vw;
-    height: 45vw;
+    width: 50vw;
+    height: 75vw;
 
   }
 
@@ -1248,6 +1312,20 @@ footer .copyright {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80vw;
+    width: 90vw;
+    /* padding-bottom: 4rem; */
+  }
+
+  .notfoundImg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
+
+  }
+
+  .body_conatiner_404 {
+    padding: 0 !important;
   }
 }

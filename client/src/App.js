@@ -5,6 +5,7 @@ import Course from "./pages/Course";
 import Join from "./pages/Join";
 import Login from "./pages/Login";
 import Logout from "./component/Logout";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <>
@@ -15,14 +16,7 @@ function App() {
           <Route path="/Course" element={<Course />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
-          <Route
-            path="*"
-            element={
-              <div>
-                <h2>404 Page not found</h2>
-              </div>
-            }
-          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </>
