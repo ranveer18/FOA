@@ -6,6 +6,7 @@ import Join from "./pages/Join";
 import Login from "./pages/Login";
 import Logout from "./component/Logout";
 import NotFound from "./pages/NotFound";
+import UnpaidCourse from "./pages/UnpaidCourse";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/Course" element={<Course />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/freecourse" element={<UnpaidCourse />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

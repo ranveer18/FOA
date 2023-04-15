@@ -51,15 +51,16 @@ const ContactUs = () => {
             </h4>
             <h4>
               <FaEnvelope />
-              <span>contact@FutureOfficerAcademy.com</span>
+              <span>foodsafetyofficer2023@gmail.com</span>
             </h4>
             <h4>
               <FaMapMarkerAlt />
               <span>
                 Future Officer Academy,
                 <br />
-                Patna, 801503 <br />
-                Bihar
+                Jaipur, Rajasthan
+                <br />
+                302001
               </span>
             </h4>
           </section>

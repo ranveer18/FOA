@@ -16,7 +16,7 @@ export const Teamdata = [
   {
     id: 2,
     name: "Prashant Kumar Singh",
-    role: "CEO",
+    role: "CTO",
     image: founder,
     aos: "fade-down",
     twitter: "https://twitter.com/",
@@ -24,15 +24,9 @@ export const Teamdata = [
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
   },
-  // {
-  //   id: 3,
-  //   name: "Ranveer Kumar Singh",
-  //   role: "Web Developer",
-  //   image: founder,
-  //   aos: "flip-up",
-  // },
+
   {
-    id: 4,
+    id: 3,
     name: "Ranveer Kumar Singh",
     role: "Web Developer",
     image: webDeveloper,

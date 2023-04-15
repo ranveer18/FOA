@@ -3,6 +3,7 @@ import login from "../images/login.svg";
 import { useNavigate } from "react-router-dom";
 import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Telegram from "../component/Telegram";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -58,6 +59,7 @@ const LoginForm = () => {
               type="text"
               placeholder="user Id"
               name="phone"
+              required
               className="login_input"
               onChange={(e) => {
                 setPhone(e.target.value);
@@ -66,6 +68,7 @@ const LoginForm = () => {
             <input
               type="password"
               name="password"
+              required
               placeholder="Password"
               className="login_input"
               onChange={(e) => {
@@ -77,6 +80,7 @@ const LoginForm = () => {
         </div>
       </div>
       {/* </section> */}
+      <Telegram />
     </>
   );
 };

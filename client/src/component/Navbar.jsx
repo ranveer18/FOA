@@ -82,6 +82,9 @@ const Navbar = () => {
             <li className="nav_li" onClick={handleContact}>
               Contact Us
             </li>
+            <Link to="/freecourse">
+              <li className="nav_li">Free Course</li>
+            </Link>
             {/* </a> */}
             <div className={islogout ? "hide_logout" : ""}>
               <Link to="/Course">
