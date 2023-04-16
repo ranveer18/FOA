@@ -38,7 +38,7 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
       if (window.scrollY > 50) {
-        navRef.current.style.boxShadow = "0px 2px 10px 1px #ffffff";
+        navRef.current.style.boxShadow = "0px 2px 10px 1px rgb(131 131 131) ";
         navRef.current.style.background = "#aabfce";
       } else {
         navRef.current.style.background = null;

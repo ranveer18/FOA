@@ -9,9 +9,11 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [isloding, setisloding] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setisloding(true);
       const response = await fetch("/api/v1/login/student", {
         method: "POST",
         credentials: "include",
@@ -28,9 +30,12 @@ const LoginForm = () => {
       const data = response.json();
       if (response.status === 400 || !data) {
         window.alert("invalid credentials");
+        setisloding(false);
       } else if (response.status === 201) {
+        setisloding(false);
         navigate("/course");
       } else {
+        setisloding(false);
         window.alert("invalid credentials");
       }
     } catch (error) {
@@ -75,6 +80,9 @@ const LoginForm = () => {
                 setPassword(e.target.value);
               }}
             />
+            <p className={isloding ? "showLoading" : "hideLoading"}>
+              Please wait...
+            </p>
             <input type="submit" value="login" className="body_btn" />
           </form>
         </div>

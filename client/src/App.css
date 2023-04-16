@@ -4,6 +4,12 @@
   box-sizing: border-box;
   /* border: 1px solid red; */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  -ms-overflow-style: none;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -277,12 +283,12 @@ header {
   background: rgb(170, 191, 206);
   color: black;
   border-radius: 5px;
-  box-shadow: 1px 5px 10px #fff;
+  box-shadow: 1px 5px 10px rgb(131 131 131);
   transition: all .6s ease-in-out;
 }
 
 .course_card:hover {
-  box-shadow: 1px 5px 30px #fff;
+  box-shadow: 1px 5px 30px rgb(101 101 101);
 }
 
 /* filter */
@@ -460,7 +466,7 @@ header {
   /* background-color: var(--primary-color); */
   /* background-color: #fff; */
   background-color: rgb(170, 191, 206);
-  box-shadow: 3px 5px 10px #fff;
+  box-shadow: 3px 5px 10px rgb(131 131 131);
   height: 40rem;
   /* margin: 2rem; */
   width: 25rem;
@@ -539,7 +545,7 @@ header {
 /*  */
 
 .get-in-touch {
-  padding: 10rem;
+  padding: 2rem;
   background-image: url(../src/images/bg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -562,7 +568,7 @@ header {
   /* background-color: #fff;   */
   border-radius: 10px;
   border: 1px solid #fff;
-  box-shadow: 5px 10px 16px #fff;
+  box-shadow: 5px 10px 16px rgb(131 131 131);
 }
 
 .get-in-touch-contact-info {
@@ -701,7 +707,7 @@ input:focus {
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  width: 190px;
+  width: 180px;
   border-bottom: 2px solid #999;
 }
 
@@ -799,6 +805,13 @@ span a {
   cursor: pointer;
   color: red;
 } */
+.showLoading {
+  display: flex;
+}
+
+.hideLoading {
+  display: none;
+}
 
 .QrCode {
   max-width: 100%;
@@ -1266,6 +1279,10 @@ footer .copyright {
   .get-in-touch-form,
   .get-in-touch-contact-info {
     width: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
   }
 
   .form-user-name {

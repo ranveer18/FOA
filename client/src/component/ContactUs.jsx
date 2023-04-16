@@ -16,7 +16,8 @@ const ContactUs = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = () => {
-    alert(`${name},${lastname},${email},${phone},${message}`);
+    // alert(`${name},${lastname},${email},${phone},${message}`);
+    alert("Thank you for contacting us");
   };
 
   return (
