@@ -4,20 +4,51 @@ import {
   FaLinkedin,
   FaFacebook,
   FaInstagram,
-  FaPhoneAlt,
+  FaTelegramPlane,
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const ContactUs = () => {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = () => {
-    // alert(`${name},${lastname},${email},${phone},${message}`);
-    alert("Thank you for contacting us");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/v1/contact", {
+        method: "POST",
+        credentials: "include",
+        mode: "cors",
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          lastname,
+          email,
+          phone,
+          message,
+        }),
+      });
+      const data = response.json();
+      if (response.status === 400 || !data) {
+        window.alert("Enter vaild Data");
+      } else if (response.status === 201) {
+        window.alert("Thank you for contacting us");
+        navigate("/join");
+      } else {
+        window.alert("Enter vaild Data");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -47,8 +78,8 @@ const ContactUs = () => {
             <div className="circle get-in-touch-contact-info-circle-2"></div>
             <div className="circle get-in-touch-contact-info-circle-3"></div>
             <h4>
-              <FaPhoneAlt />
-              <span>+91 7564XXXX</span>
+              <FaTelegramPlane />
+              <span>@Future_officer_academy</span>
             </h4>
             <h4>
               <FaEnvelope />
@@ -68,7 +99,6 @@ const ContactUs = () => {
 
           <section className="get-in-touch-form" data-aos="fade-up">
             <form
-              action="https://formsubmit.co/sajan.ranveer@gmail.com"
               name="userDetails"
               id="form"
               method="post"
