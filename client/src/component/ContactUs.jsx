@@ -83,7 +83,7 @@ const ContactUs = () => {
             </h4>
             <h4>
               <FaEnvelope />
-              <span>foodsafetyofficer2023@gmail.com</span>
+              <span> foodsafetyofficer2023@gmail.com</span>
             </h4>
             <h4>
               <FaMapMarkerAlt />

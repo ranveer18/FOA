@@ -1281,8 +1281,8 @@ footer .copyright {
   .get-in-touch-contact-info {
     width: 100%;
     display: flex;
-
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
     justify-content: center;
   }
 
