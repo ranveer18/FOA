@@ -1,5 +1,6 @@
 import webDeveloper from "../images/team-developer.jpg";
-import founder from "../images/team-founder.jpg";
+import founder from "../images/team-founder.jpeg";
+import CTO from "../images/team-cto.jpg";
 
 export const Teamdata = [
   {
@@ -17,7 +18,7 @@ export const Teamdata = [
     id: 2,
     name: "Prashant Kumar Singh",
     role: "CTO",
-    image: founder,
+    image: CTO,
     aos: "fade-down",
     twitter: "https://twitter.com/",
     linkedin: "https://www.linkedin.com/",
