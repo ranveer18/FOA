@@ -615,4 +615,18 @@ export const cardData = [
     Month: "April",
     courseLink: "https://forms.gle/HPRpjhNpPHkduCBv9",
   },
+  {
+    id: 91,
+    Name: "Eukaryotic and Prokaryotic cells",
+    Date: "18-April",
+    Month: "April",
+    courseLink: "https://forms.gle/nCbwsP1gFARjW6zYA",
+  },
+  {
+    id: 92,
+    Name: "plants alkaloids and their uses, animal and plant toxins ,toxic substances and metabolism",
+    Date: "18-April",
+    Month: "April",
+    courseLink: "https://forms.gle/feys4qTS1Ms9WiT69",
+  },
 ];
