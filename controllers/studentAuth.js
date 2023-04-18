@@ -8,8 +8,8 @@ const studentRegister = require("../models/studentModel");
 
 const studentRegisterRoute = async (req, res) => {
   try {
-    const { name, phone, password, cpassword } = req.body;
-    if (!name || !phone || !password || !cpassword) {
+    const { name, phone, password } = req.body;
+    if (!name || !phone || !password) {
       return res.status(400).json({ error: "Enter valid data" });
     }
 
@@ -18,15 +18,13 @@ const studentRegisterRoute = async (req, res) => {
     });
     if (userExit) {
       return res.status(422).json({ error: "user already exit" });
-    } else if (password != cpassword) {
-      return res.status(422).json({ error: "password are not matching" });
     } else {
       const verificationToken = crypto.randomBytes(40).toString("hex");
       const StudentRegisterData = await studentRegister.create({
         name,
         phone,
         password,
-        cpassword,
+        // cpassword,
       });
       await StudentRegisterData.save();
       res.status(201).json({ message: req.body });
