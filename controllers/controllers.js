@@ -1,5 +1,6 @@
 require("../db/conn");
 const contact = require("../models/ContactModel");
+const Course = require("../models/CourseModel");
 
 const contactRoute = async (req, res) => {
   try {
@@ -21,4 +22,34 @@ const contactRoute = async (req, res) => {
     console.log(error);
   }
 };
-module.exports = contactRoute;
+
+const courseRoute = async (req, res) => {
+  try {
+    const { name, date, month, courseLink } = req.body;
+    if (!name || !date || !month || !courseLink) {
+      return res.status(400).json({ error: "Enter valid data" });
+    }
+    const courseExit = await Course.findOne({
+      courseLink: courseLink,
+    });
+    if (courseExit) {
+      return res.status(422).json({ error: "Course already exit" });
+    } else {
+      const courseData = await Course.create({
+        name,
+        date,
+        month,
+        courseLink,
+      });
+      await courseData.save();
+      res.status(201).json({ message: req.body });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+// module.exports = { contactRoute, courseRoute };
+module.exports = {
+  contactRoute,
+  courseRoute,
+};
