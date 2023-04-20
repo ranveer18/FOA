@@ -10,12 +10,6 @@ const studentRoute = require("./Routes/studentRoute");
 const studentAuthenticate = require("./middleware/studentAuthenticate");
 const { logout, student } = require("./controllers/AuthRoute");
 
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: "https://futureofficersacademy.netlify.app/",
-//   })
-// );
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/v1", studentRoute);

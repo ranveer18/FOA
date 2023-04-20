@@ -1,27 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
-// import { FaFilter } from "react-icons/fa";
-import { cardData } from "./courseData";
+
 import Telegram from "../component/Telegram";
 
-const MonthBtn = [
-  "All",
-  ...new Set(
-    cardData.map(({ Month }) => {
-      return Month;
-    })
-  ),
-];
 const Course = () => {
-  const [Data, setData] = useState(cardData);
-  // const [foundUsers, setFoundUsers] = useState(cardData);
-  const navigation = useNavigate();
+  const [cardDatas, setcardDatas] = useState([]);
+  const [course, setCourse] = useState([]);
+
+  const getcourseData = async () => {
+    try {
+      const response = await axios.get("/api/v1/course");
+      setCourse(response.data);
+      setcardDatas(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
     verifyUser();
-  });
+    getcourseData();
+  }, []);
+  const MonthBtn = [
+    "All",
+    ...new Set(
+      cardDatas.map(({ month }) => {
+        return month;
+      })
+    ),
+  ];
+  const navigation = useNavigate();
 
   const verifyUser = async () => {
     try {
@@ -34,37 +45,31 @@ const Course = () => {
         },
       });
       const data = await res.json();
-      console.log(`data ${data}`);
-      console.log(`res ${res}`);
       if (res.status === 401 || !data) {
-        const error = new Error(res.error);
-        console.log(`error ${error}`);
+        window.alert(`Please Login `);
+        navigation("/login");
       } else if (res.status === 200) {
-        console.log("verified");
+        // console.log("verified");
       }
     } catch (error) {
-      // console.log(`error ${error}`);
-      // window.alert(error);
       window.alert(`Please Login `);
-      // window.location.href = "/login";
       navigation("/login");
 
       console.log(error);
     }
   };
   //
-  const filterItem = (Month) => {
-    if (Month === "All") {
-      setData(cardData);
+  const filterItem = (month) => {
+    if (month === "All") {
+      setCourse(cardDatas);
       return;
     }
 
-    const updateItem = cardData.filter((curElem) => {
-      return curElem.Month === Month;
+    const updateItem = cardDatas.filter((curElem) => {
+      return curElem.month === month;
     });
-    setData(updateItem);
+    setCourse(updateItem);
   };
-
   return (
     <>
       <Navbar />
@@ -72,22 +77,6 @@ const Course = () => {
         <h1 className="course_heading">
           RPSC FSO-RAJASTHAN FOOD SAFETY OFFICER MOCK TEST SERIES
         </h1>
-        {/* <div className="admin__search__container">
-          <div className="admin__search__search">
-            <div className="filter_icon">
-              <FaFilter />
-            </div>
-            <input
-              // type="text"
-              type="search"
-              className="filter__registration input"
-              value={name}
-              onChange={filter}
-              placeholder="Search by Course Name "
-            />
-            <div className="search__button">Search</div>
-          </div>
-        </div> */}
         <div className="work_filter-btn">
           <div className="work_filter-btns">
             {MonthBtn.map((curClem, index) => {
@@ -111,11 +100,11 @@ const Course = () => {
           <div className="card_container">
             <div className="course_content">
               {/*  */}
-              {Data.map(({ index, id, Name, Date, Month, courseLink }) => {
+              {course.map(({ name, date, courseLink }, index) => {
                 return (
-                  <div className="course_card" key={id}>
-                    <h1>{Name}</h1>
-                    <p>Date: {Date}</p>
+                  <div className="course_card" key={index}>
+                    <h1>{name}</h1>
+                    <p>Date: {date}</p>
                     <button className="body_btn">
                       <a href={courseLink}>
                         <p>View Now </p>

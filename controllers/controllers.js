@@ -2,6 +2,20 @@ require("../db/conn");
 const contact = require("../models/ContactModel");
 const Course = require("../models/CourseModel");
 
+const getAllCourse = async (req, res) => {
+  const getAllCourseData = await Course.find();
+  res.status(200).json(getAllCourseData);
+};
+
+const getSingleCourse = async (req, res) => {
+  const _id = req.params.id;
+  const getSingleCourseData = await Course.findById({ _id });
+  if (!getSingleCourseData) {
+    res.status(404).send();
+  } else {
+    res.status(200).send(getSingleCourseData);
+  }
+};
 const contactRoute = async (req, res) => {
   try {
     const { name, lastname, email, phone, message } = req.body;
@@ -52,4 +66,6 @@ const courseRoute = async (req, res) => {
 module.exports = {
   contactRoute,
   courseRoute,
+  getAllCourse,
+  getSingleCourse,
 };
