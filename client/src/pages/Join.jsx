@@ -14,24 +14,15 @@ const Join = () => {
           <p>
             You can make a payment of Rs.399 through
             <span>
-              <a href="#" target="_blank" rel="noreferrer">
-                {" "}
-                PAYTM
-              </a>
+              <a href="/join"> PAYTM</a>
             </span>
             ,
             <span>
-              <a href="#" target="_blank" rel="noreferrer">
-                {" "}
-                GOOGLE PAY{" "}
-              </a>
+              <a href="/join"> GOOGLE PAY </a>
             </span>
             or
             <span>
-              <a href="#" target="_blank" rel="noreferrer">
-                {" "}
-                PHONE PAY{" "}
-              </a>
+              <a href="/join"> PHONE PAY </a>
             </span>
             to the UPI{" "}
             <span style={{ color: "#FF6366" }}> dkjggc1996@okicici</span>. Once
