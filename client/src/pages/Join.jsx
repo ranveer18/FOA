@@ -14,33 +14,21 @@ const Join = () => {
           <p>
             You can make a payment of Rs.399 through
             <span>
-              <a
-                href="https://futureofficersacademy.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="#" target="_blank" rel="noreferrer">
                 {" "}
                 PAYTM
               </a>
             </span>
             ,
             <span>
-              <a
-                href="https://futureofficersacademy.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="#" target="_blank" rel="noreferrer">
                 {" "}
                 GOOGLE PAY{" "}
               </a>
             </span>
             or
             <span>
-              <a
-                href="https://futureofficersacademy.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="#" target="_blank" rel="noreferrer">
                 {" "}
                 PHONE PAY{" "}
               </a>
