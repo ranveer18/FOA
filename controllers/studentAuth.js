@@ -45,23 +45,20 @@ const loginRoute = async (req, res) => {
 
     const userLogin = await studentRegister.findOne({ phone: phone });
     // console.log(userLogin);
-
+    if (!userLogin) {
+      return res.status(404).json({ error: "user not found" });
+    }
     if (userLogin) {
       const isMatch = await bcrypt.compare(password, userLogin.password);
-      const token = await userLogin.generateAuthToken();
-
-      res.cookie("jwtoken", token, {
-        // origin: "https://futureofficersacademy.netlify.app/",
-        expires: new Date(Date.now() + 1800000),
-        httpOnly: false,
-
-        // 30min valid
-      });
-      // console.log(phone);
-      // console.log(password);
       if (!isMatch) {
         res.status(400).json({ error: "Invalid creditials" });
       } else {
+        const token = await userLogin.generateAuthToken();
+        res.cookie("jwtoken", token, {
+          expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+          httpOnly: false,
+          // 1month valid
+        });
         res.status(201).json({ message: "Login successfully" });
       }
     }

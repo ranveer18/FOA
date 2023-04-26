@@ -34,6 +34,9 @@ const LoginForm = () => {
       } else if (response.status === 201) {
         setisloding(false);
         navigate("/course");
+      } else if (response.status === 404) {
+        setisloding(false);
+        window.alert("user Not Found");
       } else {
         setisloding(false);
         window.alert("invalid credentials");
