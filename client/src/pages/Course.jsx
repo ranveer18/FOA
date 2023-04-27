@@ -103,7 +103,7 @@ const Course = () => {
               {course.map(({ name, date, courseLink }, index) => {
                 return (
                   <div className="course_card" key={index}>
-                    <h1>{name}</h1>
+                    <h3>{name}</h3>
                     <p>Date: {date}</p>
                     <button className="body_btn">
                       <a href={courseLink}>
