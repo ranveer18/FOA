@@ -19,7 +19,7 @@ const HomeBody = () => {
             </Link>
           </div>
           <div className="right_content">
-            <img src={homeImg} alt="img" className="homeImg" />
+            <img src={homeImg} alt="Home Image" className="homeImg" />
           </div>
         </div>
       </section>

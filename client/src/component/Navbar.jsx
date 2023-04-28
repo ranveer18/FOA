@@ -39,10 +39,10 @@ const Navbar = () => {
     window.addEventListener("scroll", (e) => {
       if (window.scrollY > 50) {
         navRef.current.style.boxShadow = "0px 2px 10px 1px rgb(131 131 131) ";
-        navRef.current.style.background = "#aabfce";
+        navRef.current.style.background = "darkslategrey";
       } else {
-        navRef.current.style.background = null;
-        navRef.current.style.boxShadow = null;
+        navRef.current.style.background = "darkslategrey";
+        navRef.current.style.boxShadow = "none";
       }
     });
   }, []);

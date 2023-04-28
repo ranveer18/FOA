@@ -24,7 +24,11 @@ const OurTeam = () => {
               return (
                 <div className="team_card-border" data-aos={aos} key={id}>
                   <div className="team_card">
-                    <img src={image} alt="img" className="our_team-img" />
+                    <img
+                      src={image}
+                      alt={`${role} Image`}
+                      className="our_team-img"
+                    />
                     <div className="team_details">
                       <h3>{name}</h3>
                       <p>{role}</p>

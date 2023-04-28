@@ -61,7 +61,7 @@ const LoginForm = () => {
               </div>
             </Link>
           </div>
-          <img src={login} alt="img" className="loginImg" />
+          <img src={login} alt="Login Image" className="loginImg" />
           <form onSubmit={handleSubmit} className="form_container">
             <input
               type="text"

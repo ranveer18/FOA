@@ -149,7 +149,7 @@ header {
 
 .body_container {
   display: flex;
-  background-image: url(../src/images/bg.jpg);
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -165,7 +165,8 @@ header {
 
 .course_container {
   display: flex;
-  background-image: url(../src/images/bg.jpg);
+  /* background-image: url(../src/images/bg.jpg); */
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -228,6 +229,7 @@ header {
 
 .body_para {
   padding: 1rem;
+  color: #fff;
 }
 
 .homeImg {
@@ -297,8 +299,9 @@ header {
   padding: 1rem;
   /* background-image: var(--linear-gradient); */
   /* background-color: rgb(184, 183, 183); */
-  background: rgb(170, 191, 206);
-  color: black;
+  /* background: rgb(170, 191, 206); */
+  background: #355555;
+  color: #e8dada;
   border-radius: 5px;
   box-shadow: 1px 5px 10px rgb(131 131 131);
   transition: all .6s ease-in-out;
@@ -388,7 +391,8 @@ header {
   align-items: center;
   /* height: 50vh; */
   /* width: 100vw; */
-  background-image: url(../src/images/bg.jpg);
+  /* background-image: url(../src/images/bg.jpg); */
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -439,8 +443,7 @@ header {
   flex-wrap: wrap;
   font-size: 20px;
   font-weight: 500;
-  color: #333;
-
+  color: #fff;
 }
 
 .para {
@@ -453,7 +456,8 @@ header {
 
 .team_container {
   display: flex;
-  background-image: url(../src/images/bg.jpg);
+  /* background-image: url(../src/images/bg.jpg); */
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -482,7 +486,8 @@ header {
   position: relative;
   /* background-color: var(--primary-color); */
   /* background-color: #fff; */
-  background-color: rgb(170, 191, 206);
+  /* background-color: rgb(170, 191, 206); */
+  background-color: var(--bg-color);
   box-shadow: 3px 5px 10px rgb(131 131 131);
   height: 40rem;
   /* margin: 2rem; */
@@ -509,7 +514,7 @@ header {
   position: relative;
   border: 10px solid var(--primary-color);
   position: relative;
-  background-color: rgb(170, 191, 206);
+  /* background-color: rgb(170, 191, 206); */
   height: 42rem;
   z-index: 2;
   margin: 5rem;
@@ -535,7 +540,13 @@ header {
   flex-direction: column;
   /* align-items: center; */
   padding: 1rem;
-  color: #333;
+  color: #fff;
+}
+
+.team_details p {
+  color: var(--primary-color);
+  font-weight: var(--font-bold);
+
 }
 
 .socials_links {
@@ -547,12 +558,12 @@ header {
 }
 
 .socials_links a:hover {
-  color: #ff7578;
+  /* color: #ff7578; */
   font-size: 2.8rem;
 }
 
 .socials_links a {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   transition: all 0.2s ease-in-out;
   /* color: ; */
 }
@@ -563,7 +574,8 @@ header {
 
 .get-in-touch {
   padding: 2rem;
-  background-image: url(../src/images/bg.jpg);
+  /* background-image: url(../src/images/bg.jpg); */
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -574,7 +586,7 @@ header {
 }
 
 .get-in-touch-details {
-  background-color: rgb(170, 191, 206);
+  /* background-color: rgb(170, 191, 206); */
   display: flex;
   justify-content: space-around;
   gap: 10px;
@@ -768,7 +780,8 @@ form>div {
 /*  */
 .Join_container {
   display: flex;
-  background-image: url(../src/images/bg.jpg);
+  /* background-image: url(../src/images/bg.jpg); */
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -795,7 +808,7 @@ form>div {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: rgb(170, 191, 206);
+  /* background-color: rgb(170, 191, 206); */
   border-radius: 1rem;
   padding: 20rem;
   box-shadow: 1px 5px 10px #fff;
@@ -803,7 +816,7 @@ form>div {
 
 .Join_content p {
   font-size: 1.5rem;
-  color: #333;
+  color: #fff;
   text-align: flex-start;
   margin-bottom: 2rem;
   letter-spacing: 0.4rem;
@@ -824,6 +837,7 @@ span a {
 } */
 .showLoading {
   display: flex;
+  color: #fff;
 }
 
 .hideLoading {
@@ -871,7 +885,8 @@ span a {
 
 .Login_container {
   display: flex;
-  background-image: url(../src/images/bg.jpg);
+  /* background-image: url(../src/images/bg.jpg); */
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -916,7 +931,7 @@ span a {
   justify-content: space-evenly;
   /* width: 35vw; */
   height: 60vh;
-  background-color: rgb(170, 191, 206);
+  /* background-color: rgb(170, 191, 206); */
   border-radius: 1rem;
   padding: 2rem 1rem;
   box-shadow: 1px 5px 10px #fff;
@@ -927,6 +942,7 @@ span a {
   width: 29rem !important;
   height: 5rem;
   border-radius: 1rem;
+  color: #fff;
   border: 2px solid #999;
   padding: 5px;
   font-size: 18px;
@@ -1021,6 +1037,15 @@ footer .copyright {
   padding-bottom: 10rem;
   animation: 1s infinite;
   animation-name: shake;
+}
+
+.uplaod_label {
+  color: var(--primary-color);
+  font-size: 1.7rem;
+}
+
+.uplaod_input {
+  color: #fff;
 }
 
 @keyframes shake {
@@ -1128,8 +1153,9 @@ footer .copyright {
     flex-direction: column;
     width: 60%;
     height: 100%;
-    background-image: rgb(170, 191, 206);
-    background-color: rgb(170, 191, 206);
+    /* background-image: rgb(170, 191, 206); */
+    /* background-color: rgb(170, 191, 206); */
+    background-color: var(--bg-color);
     position: fixed;
     top: 0;
     left: 0;

@@ -9,7 +9,7 @@ const AboutUs = () => {
         </h1>
         <div className="About_content">
           <div data-aos="zoom-in-up">
-            <img src={aboutImg} alt="about" className="homeImg" />
+            <img src={aboutImg} alt="About Us" className="homeImg" />
           </div>
           <div className="About_para">
             <p className="para" data-aos="zoom-in-up">

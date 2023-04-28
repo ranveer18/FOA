@@ -55,11 +55,14 @@ const UploadCourse = () => {
         <div className="Join_content">
           <form onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="course_name">Course Name</label>
+              <label htmlFor="course_name" className="uplaod_label">
+                Course Name
+              </label>
               <input
                 type="text"
                 name="name"
                 placeholder="Course Name"
+                className="uplaod_input"
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
@@ -67,11 +70,14 @@ const UploadCourse = () => {
               />
             </div>
             <div>
-              <label htmlFor="course_name">Course Date</label>
+              <label htmlFor="course_name" className="uplaod_label">
+                Course Date
+              </label>
               <input
                 type="text"
                 name="date"
                 placeholder="ex: 17-April"
+                className="uplaod_input"
                 onChange={(e) => {
                   setDate(e.target.value);
                 }}
@@ -79,11 +85,14 @@ const UploadCourse = () => {
               ></input>
             </div>
             <div>
-              <label htmlFor="course_name">Course Month</label>
+              <label htmlFor="course_name" className="uplaod_label">
+                Course Month
+              </label>
               <input
                 type="text"
                 name="month"
                 placeholder="ex: April"
+                className="uplaod_input"
                 onChange={(e) => {
                   setMonth(e.target.value);
                 }}
@@ -91,11 +100,14 @@ const UploadCourse = () => {
               ></input>
             </div>
             <div>
-              <label htmlFor="course_name">Course Link</label>
+              <label htmlFor="course_name" className="uplaod_label">
+                Course Link
+              </label>
               <input
                 type="text"
                 name="courseLink"
                 placeholder="course link"
+                className="uplaod_input"
                 onChange={(e) => {
                   setcourseLink(e.target.value);
                 }}
