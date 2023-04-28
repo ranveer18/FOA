@@ -4,8 +4,6 @@ const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const studentRegister = require("../models/studentModel");
 
-//register student data route
-
 const studentRegisterRoute = async (req, res) => {
   try {
     const { name, phone, password } = req.body;
@@ -24,7 +22,6 @@ const studentRegisterRoute = async (req, res) => {
         name,
         phone,
         password,
-        // cpassword,
       });
       await StudentRegisterData.save();
       res.status(201).json({ message: req.body });
@@ -44,7 +41,6 @@ const loginRoute = async (req, res) => {
     }
 
     const userLogin = await studentRegister.findOne({ phone: phone });
-    // console.log(userLogin);
     if (!userLogin) {
       return res.status(404).json({ error: "user not found" });
     }

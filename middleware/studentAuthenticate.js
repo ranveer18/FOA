@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const Student = require("../models/studentModel");
-// const departmentRegister = require("../models/departmentModels");
 
 const studentAuthenticate = async (req, res, next) => {
   try {

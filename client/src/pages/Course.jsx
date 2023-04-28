@@ -49,7 +49,6 @@ const Course = () => {
         window.alert(`Please Login `);
         navigation("/login");
       } else if (res.status === 200) {
-        // console.log("verified");
       }
     } catch (error) {
       window.alert(`Please Login `);
@@ -113,23 +112,6 @@ const Course = () => {
                   </div>
                 );
               })}
-              {/* {foundUsers && foundUsers.length > 0 ? (
-                foundUsers.map(
-                  ({ index, id, Name, description, Month, courseLink }) => {
-                    return (
-                      <div className="course_card" key={id}>
-                        <h1>{Name}</h1>
-                        <p>{description}</p>
-                        <button className="body_btn">
-                          <a href={courseLink}>View Now</a>
-                        </button>
-                      </div>
-                    );
-                  }
-                )
-              ) : (
-                <h1>No results found!</h1>
-              )} */}
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-// import webDeveloper from "../images/team-developer.jpg";
 import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import { Teamdata } from "./Teamdata";
 const OurTeam = () => {
@@ -24,11 +23,7 @@ const OurTeam = () => {
               return (
                 <div className="team_card-border" data-aos={aos} key={id}>
                   <div className="team_card">
-                    <img
-                      src={image}
-                      alt={`${role} Image`}
-                      className="our_team-img"
-                    />
+                    <img src={image} alt={`${role}`} className="our_team-img" />
                     <div className="team_details">
                       <h3>{name}</h3>
                       <p>{role}</p>

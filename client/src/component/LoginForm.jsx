@@ -47,12 +47,11 @@ const LoginForm = () => {
   };
   return (
     <>
-      {/* <section className="body_container"> */}
       <div className="Login_container">
         <div className="Login_form">
           <div className="login_head">
             <Link to="/">
-              <div className="login_nav__close">{/* <MdClose /> */}</div>
+              <div className="login_nav__close"></div>
             </Link>
             <h1 className="body_heading">Login</h1>
             <Link to="/">
@@ -61,7 +60,7 @@ const LoginForm = () => {
               </div>
             </Link>
           </div>
-          <img src={login} alt="Login Image" className="loginImg" />
+          <img src={login} alt="Login" className="loginImg" />
           <form onSubmit={handleSubmit} className="form_container">
             <input
               type="text"
@@ -90,7 +89,6 @@ const LoginForm = () => {
           </form>
         </div>
       </div>
-      {/* </section> */}
       <Telegram />
     </>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import homeImg from "../images/home-img.svg";
-// import ContactUs from "../component/ContactUs";
 const HomeBody = () => {
   return (
     <>
@@ -19,11 +18,10 @@ const HomeBody = () => {
             </Link>
           </div>
           <div className="right_content">
-            <img src={homeImg} alt="Home Image" className="homeImg" />
+            <img src={homeImg} alt="Home" className="homeImg" />
           </div>
         </div>
       </section>
-      {/* <ContactUs /> */}
     </>
   );
 };

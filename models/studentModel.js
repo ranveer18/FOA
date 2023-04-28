@@ -43,7 +43,6 @@ studentSchema.methods.generateAuthToken = async function () {
     console.log(err);
   }
 };
-// We will create a new collection
 const Student = new mongoose.model("Student", studentSchema);
 
 module.exports = Student;

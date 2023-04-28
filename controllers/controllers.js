@@ -62,7 +62,6 @@ const courseRoute = async (req, res) => {
     console.log(error);
   }
 };
-// module.exports = { contactRoute, courseRoute };
 module.exports = {
   contactRoute,
   courseRoute,
